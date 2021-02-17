@@ -1,0 +1,23 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "side": "interiorextension:blocks/lamp_block_side",
+    "top": "interiorextension:blocks/lamp_block_top",
+    "bottom": "interiorextension:blocks/lamp_block_bottom"
+  },
+  "elements": [
+    {
+      "name": "front",
+      "from": [0,15,0],
+      "to": [16,16,16],
+      "faces": {
+        "north": { "texture":  "#side" },
+        "south": { "texture":  "#side" },
+        "east": { "texture":  "#side" },
+        "west": { "texture":  "#side" },
+        "up": { "texture":  "#top" },
+        "down": { "texture":  "#bottom" }
+      }
+    }
+  ]
+}
