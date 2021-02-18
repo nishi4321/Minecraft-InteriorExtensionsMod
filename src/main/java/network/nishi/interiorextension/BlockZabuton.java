@@ -74,11 +74,12 @@ public class BlockZabuton extends Block {
     public void breakBlock(World world, BlockPos pos, IBlockState state) {
         super.breakBlock(world, pos, state);
         // ブロック破壊したときにEntity削除
-        List<Entity> entities = world.getLoadedEntityList();
-        for (Entity e : entities) {
-            if(pos.getX() == (int)(e.posX - 0.5) && pos.getY() == (int)e.posY && pos.getZ() == (int)(e.posZ - 0.5)) {
-                // 座った状態で破壊するとバグるのでそのうち修正
-                world.removeEntity(e);
+        if(world.isRemote) {
+            List<Entity> entities = world.getLoadedEntityList();
+            for (Entity e : entities) {
+                if (pos.getX() == (int) (e.posX - 0.5) && pos.getY() == (int) e.posY && pos.getZ() == (int) (e.posZ - 0.5)) {
+                    world.removeEntity(e);
+                }
             }
         }
     }
