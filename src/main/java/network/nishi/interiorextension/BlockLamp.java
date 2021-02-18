@@ -15,6 +15,7 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraft.world.gen.structure.StructureBoundingBox;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -32,15 +33,15 @@ public class BlockLamp extends Block {
     }
 
     protected static final AxisAlignedBB AABB_BASE =
-            new AxisAlignedBB(0.0D, 0.875D, 0.0D, 1.0D, 1.0D, 1.0D);
+            new AxisAlignedBB(0.0D, 0.9375D, 0.0D, 1.0D, 1.0D, 1.0D);
     protected static final AxisAlignedBB AABB_WALL_NORTH =
-            new AxisAlignedBB(0.0D, 0.875D, 0.0D, 1.0D, 1.0D, 1.0D);
+            new AxisAlignedBB(0.0D, 0.9375D, 0.0D, 1.0D, 1.0D, 1.0D);
     protected static final AxisAlignedBB AABB_WALL_SOUTH =
-            new AxisAlignedBB(0.0D, 0.875D, 0.0D, 1.0D, 1.0D, 1.0D);
+            new AxisAlignedBB(0.0D, 0.9375D, 0.0D, 1.0D, 1.0D, 1.0D);
     protected static final AxisAlignedBB AABB_WALL_EAST =
-            new AxisAlignedBB(0.9375D, 0.875D, 0.0D, 1.0D, 1.0D, 1.0D);
+            new AxisAlignedBB(0.9375D, 0.9375D, 0.0D, 1.0D, 1.0D, 1.0D);
     protected static final AxisAlignedBB AABB_WALL_WEST =
-            new AxisAlignedBB(0.0D, 0.875D, 0.0D, 1.0D, 1.0D, 1.0D);
+            new AxisAlignedBB(0.0D, 0.9375D, 0.0D, 1.0D, 1.0D, 1.0D);
 
     @Override
     public void addCollisionBoxToList(IBlockState state, World worldIn,
@@ -55,7 +56,7 @@ public class BlockLamp extends Block {
 
     @Override
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-        return FULL_BLOCK_AABB;
+        return new AxisAlignedBB(0.0D, 0.9375D, 0.0D, 1.0D, 1.0D, 1.0D);
     }
 
     @Override
