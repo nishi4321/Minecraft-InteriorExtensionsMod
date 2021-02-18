@@ -1,15 +1,15 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "side": "interiorextension:blocks/grasspath_slab_side_upper",
-    "top": "minecraft:blocks/grass_path_top",
-    "bottom": "minecraft:blocks/dirt"
+    "side": "interiorextension:blocks/zabuton_block_side",
+    "top": "interiorextension:blocks/zabuton_block_top",
+    "bottom": "interiorextension:blocks/zabuton_block_bottom"
   },
   "elements": [
     {
       "name": "front",
-      "from": [0,8,0],
-      "to": [16,15,16],
+      "from": [0,0,0],
+      "to": [16,2,16],
       "faces": {
         "north": { "texture":  "#side" },
         "south": { "texture":  "#side" },

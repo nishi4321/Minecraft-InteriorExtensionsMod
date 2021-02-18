@@ -19,6 +19,8 @@ import net.minecraftforge.fml.common.event.FMLConstructionEvent;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.EntityEntry;
+import net.minecraftforge.fml.common.registry.EntityEntryBuilder;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -28,7 +30,7 @@ public class InteriorExtension {
 
     public static final String MODID = "interiorextension";
     public static final String MODNAME = "Interior Extension Mod";
-    public static final String VERSION = "1.0.2";
+    public static final String VERSION = "1.1.0";
 
     @Mod.Metadata(MODID)
     public static ModMetadata meta;
@@ -37,6 +39,7 @@ public class InteriorExtension {
     public static final Block TAKE_FENCE = new TakeFence();
     public static final Block LAMP_BLOCK = new BlockLamp();
     public static final Block GLOW_GLASS_BLOCK = new BlockGlowGlass();
+    public static final Block ZABUTON_BLOCK = new BlockZabuton();
 
     public static BlockHalfGrassPath HALF_GRASS_PATH_BLOCK_HALF  = new BlockHalfGrassPath.Half("grasspath_slab", Material.PLANTS);
     public static BlockHalfGrassPath HALF_GRASS_PATH_BLOCK_DOUBLE = new BlockHalfGrassPath.Double("double_grasspath_slab", Material.PLANTS);
@@ -63,11 +66,18 @@ public class InteriorExtension {
     }
 
     @SubscribeEvent
+    public void registerEntities(RegistryEvent.Register<EntityEntry> event) {
+        EntityEntry entry = EntityEntryBuilder.create().entity(EntityZabuton.class).id(new ResourceLocation("interiorextension"), 0).name("EntityZabuton").tracker(64, 20, false).build();
+        event.getRegistry().register(entry);
+    }
+
+    @SubscribeEvent
     public void registerItems(RegistryEvent.Register<Item> event) {
         event.getRegistry().register(new ItemBlock(TATAMI_BLOCK).setRegistryName("interiorextension", "tatami_block"));
         event.getRegistry().register(new ItemBlock(TAKE_FENCE).setRegistryName("interiorextension", "take_fence"));
         event.getRegistry().register(new ItemBlock(LAMP_BLOCK).setRegistryName("interiorextension", "lamp_block"));
         event.getRegistry().register(new ItemBlock(GLOW_GLASS_BLOCK).setRegistryName("interiorextension", "glow_glass_block"));
+        event.getRegistry().register(new ItemBlock(ZABUTON_BLOCK).setRegistryName("interiorextension","zabuton_block"));
         event.getRegistry().register(new ItemSlab(HALF_GRASS_PATH_BLOCK_HALF, HALF_GRASS_PATH_BLOCK_HALF, HALF_GRASS_PATH_BLOCK_DOUBLE).setRegistryName(HALF_GRASS_PATH_BLOCK_HALF.getRegistryName()));
         event.getRegistry().register(new ItemSlab(HALF_GLASS_HALF, HALF_GLASS_HALF, HALF_GLASS_DOUBLE).setRegistryName(HALF_GLASS_HALF.getRegistryName()));
         event.getRegistry().register(new ItemSlab(HALF_GLOW_GLASS_HALF, HALF_GLOW_GLASS_HALF, HALF_GLOW_GLASS_DOUBLE).setRegistryName(HALF_GLOW_GLASS_HALF.getRegistryName()));
@@ -79,6 +89,7 @@ public class InteriorExtension {
         event.getRegistry().register(TAKE_FENCE);
         event.getRegistry().register(LAMP_BLOCK);
         event.getRegistry().register(GLOW_GLASS_BLOCK);
+        event.getRegistry().register(ZABUTON_BLOCK);
         event.getRegistry().register(HALF_GRASS_PATH_BLOCK_HALF);
         event.getRegistry().register(HALF_GRASS_PATH_BLOCK_DOUBLE);
         event.getRegistry().register(HALF_GLASS_HALF);
@@ -94,6 +105,7 @@ public class InteriorExtension {
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(TAKE_FENCE), 0, new ModelResourceLocation(new ResourceLocation("interiorextension", "take_fence"), "inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(LAMP_BLOCK), 0, new ModelResourceLocation(new ResourceLocation("interiorextension", "lamp_block"), "inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(GLOW_GLASS_BLOCK), 0, new ModelResourceLocation(new ResourceLocation( "interiorextension", "glow_glass_block"), "inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ZABUTON_BLOCK),0,new ModelResourceLocation(new ResourceLocation("interiorextension", "zabuton_block"),"inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(HALF_GRASS_PATH_BLOCK_HALF), 0, new ModelResourceLocation(new ResourceLocation("interiorextension", "grasspath_slab"), "inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(HALF_GRASS_PATH_BLOCK_DOUBLE), 0, new ModelResourceLocation(new ResourceLocation("interiorextension", "double_grasspath_slab"), "inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(HALF_GLASS_HALF), 0, new ModelResourceLocation(new ResourceLocation("interiorextension", "glass_slab"), "inventory"));
