@@ -15,8 +15,8 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 version = '1.1.1'
-group = 'nishi.network.interiorextension' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'interiorextension'
+group = 'nishi.network.interiorextensions' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'interiorextensions'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
@@ -86,7 +86,7 @@ dependencies {
 jar {
     manifest {
         attributes([
-            "Specification-Title": "Interior Extension Mod",
+            "Specification-Title": "Interior Extensions Mod",
             "Specification-Vendor": "Nishi1234",
             "Specification-Version": "1.0.0", // We are version 1 of ourselves
             "Implementation-Title": project.name,

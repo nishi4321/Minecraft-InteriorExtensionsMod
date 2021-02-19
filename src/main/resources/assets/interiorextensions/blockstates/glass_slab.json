@@ -1,0 +1,17 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "particle": "minecraft:blocks/glass"
+    },
+    "model": "interiorextensions:glass_slab",
+    "uvlock": false
+  },
+  "variants": {
+    "half=top,variant=default": { "model": "interiorextensions:upper_glass_slab" },
+    "half=bottom,variant=default": { "model": "interiorextensions:lower_glass_slab" }
+  },
+  "inventory": [{
+
+  }]
+}

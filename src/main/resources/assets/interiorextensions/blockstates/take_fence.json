@@ -1,0 +1,19 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "particle": "interiorextensions:blocks/take_fence"
+    },
+    "model": "interiorextensions:take_fence",
+    "uvlock": false
+  },
+  "variants": {
+    "facing=north": { "model": "interiorextensions:take_fence" },
+    "facing=south": { "model": "interiorextensions:take_fence", "y": 180 },
+    "facing=west":  { "model": "interiorextensions:take_fence", "y": 270 },
+    "facing=east":  { "model": "interiorextensions:take_fence", "y": 90 },
+    "inventory": [{
+
+    }]
+  }
+}

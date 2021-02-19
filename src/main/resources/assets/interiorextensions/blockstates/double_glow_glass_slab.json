@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "variant=default": { "model": "interiorextensions:glow_glass_block" }
+  }
+}

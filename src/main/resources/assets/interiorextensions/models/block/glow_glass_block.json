@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "interiorextensions:blocks/glow_glass_block"
+  }
+}

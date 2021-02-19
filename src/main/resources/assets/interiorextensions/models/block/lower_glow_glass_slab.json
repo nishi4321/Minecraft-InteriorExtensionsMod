@@ -1,0 +1,23 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "side": "interiorextensions:blocks/glow_glass_block",
+    "top": "interiorextensions:blocks/glow_glass_block",
+    "bottom": "interiorextensions:blocks/glow_glass_block"
+  },
+  "elements": [
+    {
+      "name": "front",
+      "from": [0,0,0],
+      "to": [16,8,16],
+      "faces": {
+        "north": { "texture":  "#side" },
+        "south": { "texture":  "#side" },
+        "east": { "texture":  "#side" },
+        "west": { "texture":  "#side" },
+        "up": { "texture":  "#top" },
+        "down": { "texture":  "#bottom" }
+      }
+    }
+  ]
+}

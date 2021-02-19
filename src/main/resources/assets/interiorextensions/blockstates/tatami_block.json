@@ -1,0 +1,19 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "particle": "interiorextensions:blocks/tatami_block"
+    },
+    "model": "interiorextensions:tatami_block",
+    "uvlock": false
+  },
+  "variants": {
+    "facing=north": { "model": "interiorextensions:tatami_block" },
+    "facing=south": { "model": "interiorextensions:tatami_block", "y": 180 },
+    "facing=west":  { "model": "interiorextensions:tatami_block", "y": 270 },
+    "facing=east":  { "model": "interiorextensions:tatami_block", "y": 90 },
+    "inventory": [{
+
+    }]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    " # ",
+    " Y "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:torch"
+    },
+    "Y": {
+      "item": "minecraft:glass"
+    }
+  },
+  "result": {
+    "item": "interiorextensions:glow_glass_block",
+    "count": 1
+  }
+}

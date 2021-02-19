@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "YYY",
+    "###"
+  ],
+  "key": {
+    "Y": {
+      "item": "minecraft:wheat"
+    },
+    "#": {
+      "item": "minecraft:wool",
+      "data": 32767
+    }
+  },
+  "result": {
+    "item": "interiorextensions:zabuton_block",
+    "count": 1
+  }
+}
