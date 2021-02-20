@@ -32,7 +32,7 @@ public class InteriorExtension {
 
     public static final String MODID = "interiorextensions";
     public static final String MODNAME = "Interior Extension Mod";
-    public static final String VERSION = "1.1.2";
+    public static final String VERSION = "1.2.0";
 
     @Mod.Metadata(MODID)
     public static ModMetadata meta;
@@ -42,6 +42,7 @@ public class InteriorExtension {
     public static final Block LAMP_BLOCK = new BlockLamp();
     public static final Block GLOW_GLASS_BLOCK = new BlockGlowGlass();
     public static final Block ZABUTON_BLOCK = new BlockZabuton();
+    public static final Block FUTON_BLOCK = new BlockFuton();
 
     public static BlockHalfGrassPath HALF_GRASS_PATH_BLOCK_HALF  = new BlockHalfGrassPath.Half("grasspath_slab", Material.PLANTS);
     public static BlockHalfGrassPath HALF_GRASS_PATH_BLOCK_DOUBLE = new BlockHalfGrassPath.Double("double_grasspath_slab", Material.PLANTS);
@@ -80,6 +81,7 @@ public class InteriorExtension {
         event.getRegistry().register(new ItemBlock(LAMP_BLOCK).setRegistryName(MODID, "lamp_block"));
         event.getRegistry().register(new ItemBlock(GLOW_GLASS_BLOCK).setRegistryName(MODID, "glow_glass_block"));
         event.getRegistry().register(new ItemBlock(ZABUTON_BLOCK).setRegistryName(MODID,"zabuton_block"));
+        event.getRegistry().register(new ItemBlock(FUTON_BLOCK).setRegistryName(MODID, "futon_block"));
         event.getRegistry().register(new ItemSlab(HALF_GRASS_PATH_BLOCK_HALF, HALF_GRASS_PATH_BLOCK_HALF, HALF_GRASS_PATH_BLOCK_DOUBLE).setRegistryName(HALF_GRASS_PATH_BLOCK_HALF.getRegistryName()));
         event.getRegistry().register(new ItemSlab(HALF_GLASS_HALF, HALF_GLASS_HALF, HALF_GLASS_DOUBLE).setRegistryName(HALF_GLASS_HALF.getRegistryName()));
         event.getRegistry().register(new ItemSlab(HALF_GLOW_GLASS_HALF, HALF_GLOW_GLASS_HALF, HALF_GLOW_GLASS_DOUBLE).setRegistryName(HALF_GLOW_GLASS_HALF.getRegistryName()));
@@ -92,6 +94,7 @@ public class InteriorExtension {
         event.getRegistry().register(LAMP_BLOCK);
         event.getRegistry().register(GLOW_GLASS_BLOCK);
         event.getRegistry().register(ZABUTON_BLOCK);
+        event.getRegistry().register(FUTON_BLOCK);
         event.getRegistry().register(HALF_GRASS_PATH_BLOCK_HALF);
         event.getRegistry().register(HALF_GRASS_PATH_BLOCK_DOUBLE);
         event.getRegistry().register(HALF_GLASS_HALF);
@@ -107,7 +110,8 @@ public class InteriorExtension {
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(TAKE_FENCE), 0, new ModelResourceLocation(new ResourceLocation(MODID, "take_fence"), "inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(LAMP_BLOCK), 0, new ModelResourceLocation(new ResourceLocation(MODID, "lamp_block"), "inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(GLOW_GLASS_BLOCK), 0, new ModelResourceLocation(new ResourceLocation( MODID, "glow_glass_block"), "inventory"));
-        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ZABUTON_BLOCK),0,new ModelResourceLocation(new ResourceLocation(MODID, "zabuton_block"),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ZABUTON_BLOCK),0, new ModelResourceLocation(new ResourceLocation(MODID, "zabuton_block"),"inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(FUTON_BLOCK), 0, new ModelResourceLocation(new ResourceLocation(MODID, "futon_block"), "inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(HALF_GRASS_PATH_BLOCK_HALF), 0, new ModelResourceLocation(new ResourceLocation(MODID, "grasspath_slab"), "inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(HALF_GRASS_PATH_BLOCK_DOUBLE), 0, new ModelResourceLocation(new ResourceLocation(MODID, "double_grasspath_slab"), "inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(HALF_GLASS_HALF), 0, new ModelResourceLocation(new ResourceLocation(MODID, "glass_slab"), "inventory"));

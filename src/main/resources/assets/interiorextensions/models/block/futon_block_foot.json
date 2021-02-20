@@ -1,17 +1,16 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "side": "interiorextensions:blocks/zabuton_block_side",
-    "top": "interiorextensions:blocks/zabuton_block_top",
-    "bottom": "interiorextensions:blocks/zabuton_block_bottom"
+    "side": "interiorextensions:blocks/futon_block_side",
+    "top": "interiorextensions:blocks/futon_block_top_foot",
+    "bottom": "interiorextensions:blocks/futon_block_bottom"
   },
   "elements": [
     {
       "name": "front",
-      "from": [1,0,1],
-      "to": [15,1,15],
+      "from": [0,0,0],
+      "to": [16,2,16],
       "faces": {
-        "north": { "texture":  "#side" },
         "south": { "texture":  "#side" },
         "east": { "texture":  "#side" },
         "west": { "texture":  "#side" },

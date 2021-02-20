@@ -29,29 +29,17 @@ public class BlockLamp extends Block {
 
     protected static final AxisAlignedBB AABB_BASE =
             new AxisAlignedBB(0.0D, 0.9375D, 0.0D, 1.0D, 1.0D, 1.0D);
-    protected static final AxisAlignedBB AABB_WALL_NORTH =
-            new AxisAlignedBB(0.0D, 0.9375D, 0.0D, 1.0D, 1.0D, 1.0D);
-    protected static final AxisAlignedBB AABB_WALL_SOUTH =
-            new AxisAlignedBB(0.0D, 0.9375D, 0.0D, 1.0D, 1.0D, 1.0D);
-    protected static final AxisAlignedBB AABB_WALL_EAST =
-            new AxisAlignedBB(0.9375D, 0.9375D, 0.0D, 1.0D, 1.0D, 1.0D);
-    protected static final AxisAlignedBB AABB_WALL_WEST =
-            new AxisAlignedBB(0.0D, 0.9375D, 0.0D, 1.0D, 1.0D, 1.0D);
 
     @Override
     public void addCollisionBoxToList(IBlockState state, World worldIn,
                                       BlockPos pos, AxisAlignedBB entityBox, List<AxisAlignedBB> collidingBoxes,
                                       @Nullable Entity entityIn, boolean p_185477_7_) {
         addCollisionBoxToList(pos, entityBox, collidingBoxes, AABB_BASE);
-        addCollisionBoxToList(pos, entityBox, collidingBoxes, AABB_WALL_WEST);
-        addCollisionBoxToList(pos, entityBox, collidingBoxes, AABB_WALL_NORTH);
-        addCollisionBoxToList(pos, entityBox, collidingBoxes, AABB_WALL_EAST);
-        addCollisionBoxToList(pos, entityBox, collidingBoxes, AABB_WALL_SOUTH);
     }
 
     @Override
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-        return new AxisAlignedBB(0.0D, 0.9375D, 0.0D, 1.0D, 1.0D, 1.0D);
+        return AABB_BASE;
     }
 
     @Override
