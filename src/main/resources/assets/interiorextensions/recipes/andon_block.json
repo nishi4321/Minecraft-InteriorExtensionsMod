@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#Y#",
+    "YXY",
+    "#Y#"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:torch"
+    },
+    "Y": {
+      "item": "minecraft:paper"
+    },
+    "#": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "interiorextensions:andon_block",
+    "count": 1
+  }
+}
