@@ -23,10 +23,10 @@ import network.nishi.interiorextensions.InteriorExtension;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class BlockTakeFence extends Block {
+public class BlockBambooFence extends Block {
     public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
-    public BlockTakeFence() {
+    public BlockBambooFence() {
         super(Material.LEAVES);
         this.setRegistryName(InteriorExtension.MODID,"take_fence");
         this.setCreativeTab(CreativeTabs.DECORATIONS);

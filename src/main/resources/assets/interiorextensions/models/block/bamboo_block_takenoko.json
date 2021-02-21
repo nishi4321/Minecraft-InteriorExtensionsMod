@@ -1,0 +1,26 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "interiorextensions:blocks/bamboo_block_takenoko"
+  },
+  "elements": [
+    {
+      "name": "body_1",
+      "from": [8,0,0],
+      "to": [8,16,16],
+      "faces": {
+        "east": { "texture":  "#all" },
+        "west": { "texture":  "#all" }
+      }
+    },
+    {
+      "name": "body_2",
+      "from": [0,0,8],
+      "to": [16,16,8],
+      "faces": {
+        "north": { "texture":  "#all" },
+        "south": { "texture":  "#all" }
+      }
+    }
+  ]
+}

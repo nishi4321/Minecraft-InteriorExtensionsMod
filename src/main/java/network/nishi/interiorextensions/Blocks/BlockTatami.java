@@ -19,7 +19,7 @@ public class BlockTatami extends Block {
     public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
     public BlockTatami() {
-        super(Material.LEAVES);
+        super(Material.WOOD);
         this.setRegistryName(InteriorExtension.MODID,"tatami_block");
         this.setCreativeTab(CreativeTabs.DECORATIONS);
         this.setUnlocalizedName("tatami_block");

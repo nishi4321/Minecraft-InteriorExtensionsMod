@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "   ",
-    "###",
-    "###"
+    " ##",
+    " ##"
   ],
   "key": {
     "#": {
-      "item": "interiorextensions:tatami_block"
+      "item": "interiorextensions:bamboo_block"
     }
   },
   "result": {
     "item": "interiorextensions:take_fence",
-    "count": 6
+    "count": 1
   }
 }
